@@ -42,49 +42,43 @@
     display:none;
     align-items:center;
     justify-content:center;
-    padding:64px 80px;
+    padding:7vh 9vw;
     position:relative;
   }
   .slide.active{ display:flex; }
   .inner{
     width:100%;
-    max-width:880px;
+    max-width:820px;
   }
   .inner.center{ text-align:center; }
 
   /* ---- Shared type ---- */
   .sec-label{
     font-family:'Sora',sans-serif;
-    font-size:13px;
+    font-size:12px;
     font-weight:700;
-    letter-spacing:.14em;
+    letter-spacing:.16em;
     color:var(--teal);
     text-transform:uppercase;
-    margin-bottom:18px;
+    margin-bottom:16px;
     display:block;
   }
   h2{
     font-family:'Sora',sans-serif;
-    font-size:clamp(30px,3.6vw,46px);
+    font-size:clamp(28px,3.2vw,42px);
     font-weight:700;
     letter-spacing:-.025em;
-    line-height:1.1;
-    margin-bottom:22px;
+    line-height:1.12;
+    margin-bottom:14px;
   }
-  p{
-    color:var(--muted);
-    font-size:17px;
-    line-height:1.6;
-    margin-bottom:16px;
-  }
-  p strong{ color:var(--ink); font-weight:600; }
   p.lead{
-    font-size:clamp(19px,2.1vw,23px);
-    color:var(--ink);
+    font-size:clamp(17px,1.7vw,20px);
+    color:var(--muted);
     line-height:1.45;
-    font-weight:500;
-    margin-bottom:18px;
+    font-weight:400;
+    max-width:680px;
   }
+  p.lead strong{ color:var(--ink); font-weight:600; }
 
   /* ---- Cover ---- */
   .cover{ text-align:center; }
@@ -94,123 +88,114 @@
     text-transform:uppercase;
     color:var(--faint);
     font-weight:600;
-    margin-bottom:30px;
+    margin-bottom:28px;
     display:block;
   }
-  .hero-logo{ animation:floaty 6s ease-in-out infinite; display:inline-block; margin-bottom:22px; }
+  .hero-logo{ animation:floaty 6s ease-in-out infinite; display:inline-block; margin-bottom:20px; }
   @keyframes floaty{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
   .cover h1{
     font-family:'Sora',sans-serif;
-    font-size:clamp(72px,11vw,128px);
+    font-size:clamp(64px,10vw,116px);
     font-weight:800;
     letter-spacing:-.04em;
     line-height:.9;
-    margin-bottom:22px;
+    margin-bottom:20px;
   }
   .cover .tag{
-    font-size:clamp(16px,2vw,20px);
+    font-size:clamp(15px,1.8vw,19px);
     color:var(--muted);
-    max-width:480px;
+    max-width:440px;
     margin:0 auto;
+    line-height:1.5;
   }
 
   /* ---- Phases grid ---- */
   .phase-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:16px;
-    margin-top:30px;
+    gap:14px;
+    margin-top:28px;
   }
   .phase{
     background:var(--bg-card);
     border:1px solid var(--line);
     border-left:3px solid var(--teal);
     border-radius:12px;
-    padding:20px 22px;
+    padding:18px 20px;
   }
-  .phase h3{ font-family:'Sora',sans-serif; font-size:17px; font-weight:600; margin-bottom:6px; }
-  .phase p{ font-size:14px; margin:0; line-height:1.45; }
+  .phase h3{ font-family:'Sora',sans-serif; font-size:16px; font-weight:600; }
 
   /* ---- Timeline ---- */
-  .timeline{ display:flex; flex-direction:column; gap:14px; margin-top:30px; }
+  .timeline{ display:flex; flex-direction:column; gap:12px; margin-top:30px; }
   .timeline-item{
     background:var(--bg-card);
     border:1px solid var(--line);
     border-radius:12px;
-    padding:18px 22px;
+    padding:16px 20px;
     display:flex;
-    gap:18px;
-    align-items:flex-start;
+    gap:16px;
+    align-items:center;
   }
   .timeline-marker{
-    width:42px; height:42px; border-radius:11px;
+    width:40px; height:40px; border-radius:10px;
     background:linear-gradient(135deg,rgba(33,219,170,.16),rgba(138,92,242,.16));
     display:flex; align-items:center; justify-content:center;
     font-size:18px; flex-shrink:0;
   }
-  .timeline-content h3{ font-family:'Sora',sans-serif; font-size:16px; font-weight:600; margin-bottom:5px; }
-  .timeline-content p{ font-size:14px; margin:0; line-height:1.45; }
+  .timeline-content h3{ font-family:'Sora',sans-serif; font-size:16px; font-weight:600; margin-bottom:2px; }
+  .timeline-content p{ font-size:13.5px; margin:0; line-height:1.4; color:var(--muted); }
 
   /* ---- Clean list ---- */
-  .list-clean{ list-style:none; margin-top:24px; }
+  .list-clean{ list-style:none; margin-top:26px; }
   .list-clean li{
-    font-size:16px;
-    color:var(--muted);
-    padding:14px 0;
+    font-size:17px;
+    color:var(--ink);
+    padding:13px 0;
     border-bottom:1px solid var(--line);
     display:flex;
     gap:14px;
-    align-items:flex-start;
+    align-items:center;
   }
   .list-clean li:last-child{ border-bottom:none; }
   .list-clean li::before{
     content:"→";
     color:var(--teal);
     font-weight:700;
-    font-size:18px;
+    font-size:17px;
     flex-shrink:0;
-    line-height:1.5;
   }
 
-  /* ---- Cards grid (metrics / roadmap) ---- */
+  /* ---- Cards grid ---- */
   .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:16px;
-    margin-top:30px;
+    gap:14px;
+    margin-top:28px;
   }
+  .cards.two{ grid-template-columns:repeat(3,1fr); }
   .card{
     background:var(--bg-card);
     border:1px solid var(--line);
     border-radius:14px;
-    padding:24px 22px;
+    padding:22px 20px;
     text-align:left;
   }
   .card h3{
     font-family:'Sora',sans-serif;
-    font-size:17px;
+    font-size:16px;
     font-weight:600;
-    margin-bottom:9px;
     background:linear-gradient(115deg,var(--teal),var(--violet));
     -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
   }
-  .card p{ font-size:14px; margin:0; line-height:1.5; }
+  .card p{ font-size:13px; margin:6px 0 0; line-height:1.45; color:var(--muted); }
 
-  /* ---- Closing big statement ---- */
+  /* ---- Closing ---- */
   .closing h2{
-    font-size:clamp(34px,4.4vw,54px);
-    line-height:1.08;
-    margin-bottom:30px;
+    font-size:clamp(32px,4vw,52px);
+    line-height:1.1;
+    margin-bottom:0;
   }
-  .closing p.lead{
-    max-width:760px;
-    margin:0 auto;
-    font-size:clamp(17px,1.9vw,21px);
-    font-weight:400;
-    color:var(--muted);
-  }
-  .closing p.lead strong{ color:var(--ink); }
-  .closing .logo-sm{ margin-top:46px; }
+  .closing .logo-sm{ margin-top:44px; }
 
   /* ---- Nav ---- */
   .nav{ position:fixed; bottom:18px; right:18px; display:flex; gap:6px; z-index:100; }
@@ -218,7 +203,7 @@
     background:var(--bg-card);
     border:1px solid var(--line);
     color:var(--muted);
-    width:34px; height:34px;
+    width:32px; height:32px;
     border-radius:8px;
     font-size:14px;
     cursor:pointer;
@@ -228,7 +213,7 @@
   .nav button:hover{ border-color:var(--teal); color:var(--teal); }
   .nav button:disabled{ opacity:.25; cursor:not-allowed; }
   .progress{
-    position:fixed; bottom:24px; left:24px;
+    position:fixed; bottom:22px; left:22px;
     font-size:11px; color:var(--faint);
     font-family:'Sora',sans-serif; font-weight:600;
     letter-spacing:.08em;
@@ -236,7 +221,6 @@
   }
 
   @media(max-width:900px){
-    .slide{ padding:48px 36px; }
     .phase-grid, .cards{ grid-template-columns:1fr; }
   }
 </style>
@@ -248,7 +232,7 @@
   <div class="inner cover">
     <span class="eyebrow">BRP Q3 · Equipo de Producto Flow</span>
     <div class="hero-logo">
-      <svg width="150" height="150" viewBox="-180 -180 360 360" role="img" aria-label="Isotipo de Obi">
+      <svg width="140" height="140" viewBox="-180 -180 360 360" role="img" aria-label="Isotipo de Obi">
         <defs>
           <linearGradient id="tg" x1="0" y1="0.1" x2="1" y2="0.9">
             <stop offset="0" stop-color="#21dbaa"/>
@@ -269,26 +253,23 @@
 <div class="slide">
   <div class="inner">
     <span class="sec-label">01 — El punto de partida</span>
-    <h2>Un proceso estructurado en 4 etapas</h2>
-    <p class="lead">El equipo trabaja con un proceso claro: Entender y Definir, Idear y Diseñar, Desarrollar y Lanzar, Medir y Aprender.</p>
-    <p>La primera etapa es la base sobre la que se construye todo: define el problema, valida con usuarios, establece el contexto. Pero también es la que más pasos tiene y la más fácil de apurar cuando hay presión por empezar a diseñar.</p>
+    <h2>Un proceso de 4 etapas</h2>
+    <p class="lead">La primera es la base de todo. Y la más fácil de apurar.</p>
     <div class="phase-grid">
-      <div class="phase"><h3>🔍 Entender y Definir</h3><p>Problema, usuarios, contexto. La base de todo.</p></div>
-      <div class="phase"><h3>💡 Idear y Diseñar</h3><p>Soluciones, prototipos, validación.</p></div>
-      <div class="phase"><h3>🚀 Desarrollar y Lanzar</h3><p>Implementación y release.</p></div>
-      <div class="phase"><h3>📊 Medir y Aprender</h3><p>Métricas e iteración.</p></div>
+      <div class="phase"><h3>🔍 Entender y Definir</h3></div>
+      <div class="phase"><h3>💡 Idear y Diseñar</h3></div>
+      <div class="phase"><h3>🚀 Desarrollar y Lanzar</h3></div>
+      <div class="phase"><h3>📊 Medir y Aprender</h3></div>
     </div>
   </div>
-  <span class="progress-num"></span>
 </div>
 
 <!-- 3 · El desafío -->
 <div class="slide">
   <div class="inner">
     <span class="sec-label">El desafío del arranque</span>
-    <h2>Cuando el proceso no se sigue</h2>
-    <p class="lead">La realidad es que a veces encaramos una iniciativa sin haber seguido todo el proceso. A veces empezamos a diseñar soluciones sin tener el problema completamente entendido.</p>
-    <p style="font-size:18px;color:var(--ink);">Acá es donde el agente nos ordena. Nos guía para saber por dónde arrancar, nos facilita la información y el contexto necesarios, y nos permite iterar con él hasta tener las bases claras antes de diseñar.</p>
+    <h2>A veces arrancamos sin entender el problema</h2>
+    <p class="lead">Acá es donde el agente nos ordena, nos guía y nos da el contexto para arrancar bien.</p>
   </div>
 </div>
 
@@ -300,19 +281,19 @@
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-marker">🌱</div>
-        <div class="timeline-content"><h3>Flow Agent — el comienzo</h3><p>Arrancó con información muy básica sobre el proceso de trabajo. Nada más. Un punto de partida humilde.</p></div>
+        <div class="timeline-content"><h3>Flow Agent</h3><p>Arrancó solo con el proceso de trabajo.</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-marker">📚</div>
-        <div class="timeline-content"><h3>Knowledge Hub en SharePoint</h3><p>Estrategia, OKRs, roadmap, plantillas, contexto de app por plataforma, KPIs. Siempre con cuidado de no pasarnos — demasiado contexto también lo marea.</p></div>
+        <div class="timeline-content"><h3>Knowledge Hub</h3><p>Estrategia, OKRs, roadmap, plantillas, KPIs.</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-marker">🤖</div>
-        <div class="timeline-content"><h3>Los subagentes</h3><p>Jira Writer para operar tickets, el agente de UX Research, Julia como protopersona conversacional, el Slacker para posts. Cada uno sumó una capacidad sin tocar el núcleo.</p></div>
+        <div class="timeline-content"><h3>Los subagentes</h3><p>Jira Writer, UX Research, Julia, el Slacker.</p></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-marker">✨</div>
-        <div class="timeline-content"><h3>Y en algún momento, un nombre</h3><p>Obi. No por capricho — la metáfora de Obi-Wan dice exactamente qué tipo de relación queríamos: <strong>el que forma al héroe sin reemplazarlo</strong>.</p></div>
+        <div class="timeline-content"><h3>Y un nombre: Obi</h3><p>El que forma al héroe sin reemplazarlo.</p></div>
       </div>
     </div>
   </div>
@@ -322,13 +303,12 @@
 <div class="slide">
   <div class="inner">
     <span class="sec-label">03 — La experiencia</span>
-    <h2>Mucho aprendizaje, mucha prueba y error</h2>
-    <p class="lead">Cosas que parecían simples se rompían. Cosas que se rompían había que documentarlas y convertirlas en tickets. Iterar, iterar, iterar.</p>
+    <h2>Mucha prueba y error</h2>
     <ul class="list-clean">
-      <li>Un prompt que funcionaba el lunes devolvía basura el miércoles</li>
-      <li>Subagentes que no se hablaban entre sí cuando tenían que derivar</li>
-      <li>Documentos generados sin el formato pedido porque faltaba un ejemplo</li>
-      <li>Respuestas que mareaban al usuario en vez de guiarlo</li>
+      <li>Lo que funcionaba el lunes se rompía el miércoles</li>
+      <li>Subagentes que no se hablaban entre sí</li>
+      <li>Documentos sin el formato pedido</li>
+      <li>Iterar, iterar, iterar</li>
     </ul>
   </div>
 </div>
@@ -338,11 +318,10 @@
   <div class="inner">
     <span class="sec-label">04 — Cómo medimos el éxito</span>
     <h2>No si lo usan, sino si funciona</h2>
-    <p class="lead">El éxito no se mide en sesiones ni en usuarios activos. Se mide en si mejoran las especificaciones, bajan los tiempos de ciclo y los documentos quedan más consistentes.</p>
     <div class="cards">
-      <div class="card"><h3>Mejores especificaciones</h3><p>Documentos más completos y bien formateados, independientemente de quién los arme.</p></div>
-      <div class="card"><h3>Menos tiempo de ciclo</h3><p>Tiempo desde que arranca una iniciativa hasta que el brief está completo y validado.</p></div>
-      <div class="card"><h3>Más consistencia</h3><p>El resultado no cambia según quién pregunta y quién está disponible para responder.</p></div>
+      <div class="card"><h3>Mejores especificaciones</h3></div>
+      <div class="card"><h3>Menos tiempo de ciclo</h3></div>
+      <div class="card"><h3>Más consistencia</h3></div>
     </div>
   </div>
 </div>
@@ -353,12 +332,12 @@
     <span class="sec-label">Lo que viene</span>
     <h2>Roadmap</h2>
     <div class="cards">
-      <div class="card"><h3>Onboarding activo</h3><p>Ejemplos concretos por caso de uso. Que el equipo sepa qué puede pedirle en su día a día.</p></div>
-      <div class="card"><h3>Conexión con BI/Looker</h3><p>Que pueda consultar métricas reales sin salir de la conversación.</p></div>
-      <div class="card"><h3>Dos nuevas protopersonas</h3><p>Sof-IA y Miguel IA, para validar con más perfiles de usuario.</p></div>
-      <div class="card"><h3>Agentes por stream</h3><p>Eventualmente, contexto y lenguaje específico por vertical de producto.</p></div>
-      <div class="card"><h3>Medición de impacto</h3><p>Instrumentar para medir los tres indicadores: calidad, tiempo y consistencia.</p></div>
-      <div class="card"><h3>Iteración constante</h3><p>Seguir documentando bugs, refinando prompts, alimentando el Knowledge Hub.</p></div>
+      <div class="card"><h3>Onboarding activo</h3></div>
+      <div class="card"><h3>Conexión con BI / Looker</h3></div>
+      <div class="card"><h3>Nuevas protopersonas</h3></div>
+      <div class="card"><h3>Agentes por stream</h3></div>
+      <div class="card"><h3>Medición de impacto</h3></div>
+      <div class="card"><h3>Iteración constante</h3></div>
     </div>
   </div>
 </div>
@@ -367,10 +346,9 @@
 <div class="slide">
   <div class="inner center closing">
     <span class="sec-label" style="display:block;">Aprendizaje clave</span>
-    <h2 class="grad-text">Liberar la cabeza para pensar mejor</h2>
-    <p class="lead">Con Obi, el equipo de producto puede dedicar su tiempo a lo que nadie más puede hacer por ellos: <strong>entender el problema real, priorizar con criterio, diseñar y validar soluciones</strong>. El agente se ocupa de lo otro: que no se salteen pasos, que la info esté cuando se necesita, que el resultado sea consistente. Te saca la carga de tener que recordar y buscar todo manualmente. Eso libera la cabeza para pensar mejor.</p>
+    <h2 class="grad-text">Liberar la cabeza<br>para pensar mejor</h2>
     <div class="logo-sm">
-      <svg width="96" height="96" viewBox="-180 -180 360 360" role="img" aria-label="Isotipo de Obi">
+      <svg width="90" height="90" viewBox="-180 -180 360 360" role="img" aria-label="Isotipo de Obi">
         <circle cx="0" cy="0" r="118" fill="none" stroke="url(#tg)" stroke-width="60" stroke-linecap="round" stroke-dasharray="566 175" transform="rotate(-118)"/>
         <path d="M -26 -44 L -26 44 L 52 0 Z" fill="#21dbaa" stroke="#21dbaa" stroke-width="18" stroke-linejoin="round"/>
         <path d="M0,-1 C0.12,-0.3 0.3,-0.12 1,0 C0.3,0.12 0.12,0.3 0,1 C-0.12,0.3 -0.3,0.12 -1,0 C-0.3,-0.12 -0.12,-0.3 0,-1 Z" transform="translate(96 -106) scale(34)" fill="url(#tg)"/>
